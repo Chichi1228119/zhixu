@@ -1,0 +1,56 @@
+name: Bug report / 问题报告
+description: Report a reproducible problem using non-sensitive files and logs.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        中文或英文均可。请使用合成最小样例，不要上传工作资料、数据库、key 或私人日志。
+        Security issue? Follow SECURITY.md; do not post exploit details here.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check / 隐私检查
+      options:
+        - label: I removed secrets and personal data; this is not a private vulnerability report. / 已去除凭据和个人资料，此处不提交私密漏洞细节。
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit / 版本或提交
+      description: Include zhixu --version and a commit identifier if running from source.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: OS, Python version, install method, retrieval strategy, answer mode; model/server name only when relevant. Never include a key.
+      placeholder: "Windows / Linux / macOS; Python; editable or wheel install; hybrid/semantic; excerpts/generation"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Minimal steps / 最小复现步骤
+      description: Include a synthetic file or its short contents when safe. Say whether it reproduces with a new empty workspace.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized output / 实际行为与脱敏输出
+      description: Include the exact error or warning. A source citation alone does not prove correctness; identify the unsupported fact when applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Checks already tried / 已做检查
+      description: Commands and real results, screenshots without personal data, or relevant regression information. Leave blank if none.

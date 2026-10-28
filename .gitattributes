@@ -1,0 +1,17 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+# Frozen evaluation hashes apply to exact bytes, including line endings.
+app/resources/evaluation/*.json -text
+*.png -text
+*.jpg -text
+*.svg text eol=lf
+# Preserve the exact upstream bytes recorded in provenance.json.
+app/static/swagger/** -text

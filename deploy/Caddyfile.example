@@ -1,0 +1,7 @@
+# Replace this example domain in BOTH this file and ZHIXU_PUBLIC_URL.
+knowledge.example.com {
+    request_body {
+        max_size 11MB
+    }
+    reverse_proxy 127.0.0.1:18765
+}

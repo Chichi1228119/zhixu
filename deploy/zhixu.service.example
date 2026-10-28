@@ -1,0 +1,26 @@
+[Unit]
+Description=Zhixu authenticated knowledge workspace
+After=network.target
+
+[Service]
+Type=simple
+User=zhixu
+Group=zhixu
+WorkingDirectory=/srv/zhixu
+Environment=ZHIXU_PUBLIC_URL=https://knowledge.example.com
+Environment=ZHIXU_REPORT_DIR=/var/lib/zhixu/reports
+ExecStart=/srv/zhixu/.venv/bin/zhixu serve --enterprise --host 127.0.0.1 --port 18765 --data-dir /var/lib/zhixu --model-dir /var/cache/zhixu --no-browser
+Restart=on-failure
+RestartSec=5
+UMask=0077
+StateDirectory=zhixu
+StateDirectoryMode=0700
+CacheDirectory=zhixu
+CacheDirectoryMode=0700
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

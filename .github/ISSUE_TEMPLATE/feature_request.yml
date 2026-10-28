@@ -1,0 +1,42 @@
+name: Feature request / 功能建议
+description: Describe a concrete local-document workflow and a verifiable outcome.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        中文或英文均可。项目聚焦个人本机资料检索、来源核对和可选生成。
+        Describe the user problem first; feature requests are not promises of implementation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem / 使用问题
+      description: Who needs this, for which document workflow, and what is difficult today? Do not include private company data.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior / 建议行为
+      description: A concrete example of inputs and expected output is more useful than a list of platform features.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Smaller alternatives / 更简单的方案
+      description: Existing behavior, documentation changes, or another tool that could solve the problem.
+  - type: textarea
+    id: verification
+    attributes:
+      label: Acceptance and tradeoffs / 验收与取舍
+      description: How could we verify this? Consider offline use, data exposure, installation cost and failure cases.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy / 隐私
+      options:
+        - label: This request contains no credentials, private documents or personal data. / 本建议不含凭据、私密文档或个人资料。
+          required: true
