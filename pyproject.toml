@@ -38,7 +38,7 @@ Issues = "https://github.com/Chichi1228119/zhixu/issues"
 [project.optional-dependencies]
 semantic = ["fastembed>=0.9.1,<0.10"]
 dev = ["pytest>=9.1.1,<10", "build>=1.2,<2", "setuptools>=77.0", "wheel>=0.45"]
-authoring = ["reportlab>=4.4.9,<5", "pypdfium2>=5.14,<6"]
+authoring = ["reportlab>=4.4.9,<6", "pypdfium2>=5.14,<6"]
 
 [project.scripts]
 zhixu = "app.cli:main"
