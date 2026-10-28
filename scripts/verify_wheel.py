@@ -174,7 +174,7 @@ def _personal(python, root, env):
     client = _client()
     with _server(python, root / 'personal-server', root / 'personal-data', env) as (base, health):
         assert health['version'] == '1.2.0' and health['document_count'] == 0
-        assert Path(health['data_location']) == root / 'personal-data'
+        assert Path(health['data_location']).samefile(root / 'personal-data')
         for path in ['/', '/static/app.js', '/api/config-template']:
             with client.open(base + path, timeout=5) as response:
                 assert response.status == 200
@@ -275,3 +275,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
