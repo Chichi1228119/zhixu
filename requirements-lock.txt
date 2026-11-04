@@ -13,7 +13,7 @@ cloudpickle==3.1.2
 colorama==0.4.6
 fastapi==0.162.0
 fastembed==0.9.1
-filelock==4.2.4
+filelock==4.2.6
 flatbuffers==25.12.19
 fsspec==2026.9.0
 h11==0.16.0
